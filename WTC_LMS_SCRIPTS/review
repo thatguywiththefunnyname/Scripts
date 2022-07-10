@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+wtc-lms reviews | grep "Invited" > file.txt
+
+if [ -s file.txt ]; then
+	echo "OK"
+	wtc-lms reviews | grep "Invited"
+	rm file.txt
+else
+	wtc-lms reviews | grep "Assigned"
+	#wtc-lms reviews | grep "Invited"
+fi
+read -p "Project name: " PROJECT1
+
+read -p "Project name: " PROJECT2
+
+read -p "Project name: " PROJECT3
+
+wtc-lms accept $PROJECT1
+wtc-lsm accept $PROJECT2
+wtc-lms accept $PROJECT3
+
+wtc-lms review_details $PROJECT1
+wtc-lms review_details $PROJECT2
+wtc-lms review_details $PROJECT3

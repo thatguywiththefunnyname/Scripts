@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+spawn wtc-lms login
+
+expect -exact "password:" {send "password\r"}
+
+expect eof

@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+wtc-lms problems
+
+read -p "Enter first project: " project1
+
+read -p "Enter second project: " project2
+
+read -p "Enter third project: " project3
+
+wtc-lms start $project1
+
+wtc-lms start $project2
+
+wtc-lms start $project3

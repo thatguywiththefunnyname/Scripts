@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+wtc-lms problems
+
+read -p "Enter project UUID: " project
+
+wtc-lms start $project

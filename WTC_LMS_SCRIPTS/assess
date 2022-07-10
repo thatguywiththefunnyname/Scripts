@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+wtc-lms start_assessment
+VAR1="done"
+read -p "Are you done: " DONE
+if [ "$VAR1" = "$DONE" ]; then
+	wtc-lms submit_assessment
+fi
+
